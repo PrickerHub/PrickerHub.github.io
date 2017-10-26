@@ -42,30 +42,6 @@
   </entry>
   
   <entry>
-    <title>社交隔离实验</title>
-    <link href="http://www.pangchen.net/2017/10/24/%E7%A4%BE%E4%BA%A4%E9%9A%94%E7%A6%BB/"/>
-    <id>http://www.pangchen.net/2017/10/24/社交隔离/</id>
-    <published>2017-10-23T19:38:56.000Z</published>
-    <updated>2017-10-23T16:24:44.481Z</updated>
-    
-    <content type="html"><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从10月24日凌晨00:00开始，从智能机切为非智能机，仅保留电话与短信功能，11月24日凌晨00:00切换回来。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;社交隔离带来的感觉，统计一个月来智能手机的流量来源、消息体、信息吞吐量等信息。识别大流量app、个人社交网络等信息。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testing…</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从10月24日凌晨00:00开始，从智能机切为非智能机，仅保留电话与短信功能，11月24日凌晨00:00切换回来。&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
-      
-    
-    </summary>
-    
-    
-      <category term="杂谈" scheme="http://www.pangchen.net/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
     <title>杂谈：聊聊男人与女人</title>
     <link href="http://www.pangchen.net/2017/10/17/RearchOfMenAndWomen/"/>
     <id>http://www.pangchen.net/2017/10/17/RearchOfMenAndWomen/</id>
@@ -137,34 +113,6 @@
   </entry>
   
   <entry>
-    <title>《吸金广告》</title>
-    <link href="http://www.pangchen.net/2017/10/09/%E5%90%B8%E9%87%91%E5%B9%BF%E5%91%8A/"/>
-    <id>http://www.pangchen.net/2017/10/09/吸金广告/</id>
-    <published>2017-10-08T19:38:56.000Z</published>
-    <updated>2017-10-15T12:08:27.720Z</updated>
-    
-    <content type="html"><![CDATA[<hr><ul><li>书名：吸金广告</li><li>作者：德鲁·埃里克·惠特曼</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/xijinguanggao.png" alt="image"></li></ul><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;书名：吸金广告&lt;/li&gt;
-&lt;li&gt;作者：德鲁·埃里克·惠特曼&lt;/li&gt;
-&lt;li&gt;读书笔记如下：&lt;/li&gt;
-&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/xijinguanggao.png&quot; alt=&quot;image&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>《自卑与超越》</title>
     <link href="http://www.pangchen.net/2017/10/09/%E8%87%AA%E5%8D%91%E4%B8%8E%E8%B6%85%E8%B6%8A/"/>
     <id>http://www.pangchen.net/2017/10/09/自卑与超越/</id>
@@ -183,6 +131,34 @@
 &lt;li&gt;作者：阿尔弗雷德·阿德勒&lt;/li&gt;
 &lt;li&gt;读书笔记如下：&lt;/li&gt;
 &lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/zibeiyuchaoyue.png&quot; alt=&quot;image&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Java多线程编程核心技术》</title>
+    <link href="http://www.pangchen.net/2017/10/09/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
+    <id>http://www.pangchen.net/2017/10/09/Java多线程编程核心技术/</id>
+    <published>2017-10-08T19:38:56.000Z</published>
+    <updated>2017-10-15T12:09:07.243Z</updated>
+    
+    <content type="html"><![CDATA[<hr><ul><li>书名：Java多线程编程核心技术</li><li>作者：高洪岩</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/JavaMutilThread.png" alt="image"></li></ul><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;书名：Java多线程编程核心技术&lt;/li&gt;
+&lt;li&gt;作者：高洪岩&lt;/li&gt;
+&lt;li&gt;读书笔记如下：&lt;/li&gt;
+&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/JavaMutilThread.png&quot; alt=&quot;imag
       
     
     </summary>
@@ -222,41 +198,13 @@
   </entry>
   
   <entry>
-    <title>《Java多线程编程核心技术》</title>
-    <link href="http://www.pangchen.net/2017/10/09/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"/>
-    <id>http://www.pangchen.net/2017/10/09/Java多线程编程核心技术/</id>
+    <title>《吸金广告》</title>
+    <link href="http://www.pangchen.net/2017/10/09/%E5%90%B8%E9%87%91%E5%B9%BF%E5%91%8A/"/>
+    <id>http://www.pangchen.net/2017/10/09/吸金广告/</id>
     <published>2017-10-08T19:38:56.000Z</published>
-    <updated>2017-10-15T12:09:07.243Z</updated>
+    <updated>2017-10-15T12:08:27.720Z</updated>
     
-    <content type="html"><![CDATA[<hr><ul><li>书名：Java多线程编程核心技术</li><li>作者：高洪岩</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/JavaMutilThread.png" alt="image"></li></ul><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;书名：Java多线程编程核心技术&lt;/li&gt;
-&lt;li&gt;作者：高洪岩&lt;/li&gt;
-&lt;li&gt;读书笔记如下：&lt;/li&gt;
-&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/JavaMutilThread.png&quot; alt=&quot;imag
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《心胜》</title>
-    <link href="http://www.pangchen.net/2017/10/06/%E5%BF%83%E8%83%9C/"/>
-    <id>http://www.pangchen.net/2017/10/06/心胜/</id>
-    <published>2017-10-05T19:38:56.000Z</published>
-    <updated>2017-10-15T12:07:08.039Z</updated>
-    
-    <content type="html"><![CDATA[<hr><ul><li>书名：心胜</li><li>作者：金一南</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/xinsheng.png" alt="image"></li></ul><hr>]]></content>
+    <content type="html"><![CDATA[<hr><ul><li>书名：吸金广告</li><li>作者：德鲁·埃里克·惠特曼</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/xijinguanggao.png" alt="image"></li></ul><hr>]]></content>
     
     <summary type="html">
     
@@ -264,12 +212,10 @@
       
         &lt;hr&gt;
 &lt;ul&gt;
-&lt;li&gt;书名：心胜&lt;/li&gt;
-&lt;li&gt;作者：金一南&lt;/li&gt;
+&lt;li&gt;书名：吸金广告&lt;/li&gt;
+&lt;li&gt;作者：德鲁·埃里克·惠特曼&lt;/li&gt;
 &lt;li&gt;读书笔记如下：&lt;/li&gt;
-&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/xinsheng.png&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr
+&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/xijinguanggao.png&quot; alt=&quot;image&quot;&gt;&lt;
       
     
     </summary>
@@ -301,6 +247,36 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 
+      
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《心胜》</title>
+    <link href="http://www.pangchen.net/2017/10/06/%E5%BF%83%E8%83%9C/"/>
+    <id>http://www.pangchen.net/2017/10/06/心胜/</id>
+    <published>2017-10-05T19:38:56.000Z</published>
+    <updated>2017-10-15T12:07:08.039Z</updated>
+    
+    <content type="html"><![CDATA[<hr><ul><li>书名：心胜</li><li>作者：金一南</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/xinsheng.png" alt="image"></li></ul><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;书名：心胜&lt;/li&gt;
+&lt;li&gt;作者：金一南&lt;/li&gt;
+&lt;li&gt;读书笔记如下：&lt;/li&gt;
+&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/xinsheng.png&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr
       
     
     </summary>
@@ -547,6 +523,32 @@
     
     
       <category term="Java" scheme="http://www.pangchen.net/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Status Code详解</title>
+    <link href="http://www.pangchen.net/2016/08/17/Status%20Code%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://www.pangchen.net/2016/08/17/Status Code详解/</id>
+    <published>2016-08-16T19:38:56.000Z</published>
+    <updated>2017-10-15T13:27:15.726Z</updated>
+    
+    <content type="html"><![CDATA[<p>1xx:信息响应类，表示接收到请求并且继续处理 </p><p>2xx:处理成功响应类，表示动作被成功接收、理解和接受 </p><p>3xx:重定向响应类，为了完成指定的动作，必须接受进一步处理 </p><p>4xx:客户端错误，客户请求包含语法错误或者是不能正确执行 </p><p>5xx:服务端错误，服务器不能正确执行一个正确的请求 </p><p>具体：</p><ul><li>“100” : Continue</li><li>“101” : witching Protocols</li><li>“200” : OK</li><li>“201” : Created</li><li>“202” : Accepted</li><li>“203” : Non-Authoritative Information</li><li>“204” : No Content</li><li>“205” : Reset Content</li><li>“206” : Partial Content</li><li>“300” : Multiple Choices</li><li>“301” : Moved Permanently</li><li>“302” : Found</li><li>“303” : See Other</li><li>“304” : Not Modified</li><li>“305” : Use Proxy</li><li>“307” : Temporary Redirect</li><li>HTTP 400 - 请求无效</li><li>HTTP 401.1 - 未授权：登录失败</li><li>　　HTTP 401.2 - 未授权：服务器配置问题导致登录失败</li><li>　　HTTP 401.3 - ACL 禁止访问资源</li><li>　　HTTP 401.4 - 未授权：授权被筛选器拒绝</li><li>　　HTTP 401.5 - 未授权：ISAPI 或 CGI 授权失败</li><li>　　HTTP 403 - 禁止访问</li><li>　　HTTP 403 - 对 Internet 服务管理器 (HTML) 的访问仅限于 Localhost</li><li>　　HTTP 403.1 禁止访问：禁止可执行访问</li><li>　　HTTP 403.2 - 禁止访问：禁止读访问</li><li>　　HTTP 403.3 - 禁止访问：禁止写访问</li><li>　　HTTP 403.4 - 禁止访问：要求 SSL</li><li>　　HTTP 403.5 - 禁止访问：要求 SSL 128</li><li>　　HTTP 403.6 - 禁止访问：IP 地址被拒绝</li><li>　　HTTP 403.7 - 禁止访问：要求客户证书</li><li>　　HTTP 403.8 - 禁止访问：禁止站点访问</li><li>　　HTTP 403.9 - 禁止访问：连接的用户过多</li><li>　　HTTP 403.10 - 禁止访问：配置无效</li><li>　　HTTP 403.11 - 禁止访问：密码更改</li><li>　　HTTP 403.12 - 禁止访问：映射器拒绝访问</li><li>　　HTTP 403.13 - 禁止访问：客户证书已被吊销</li><li>　　HTTP 403.15 - 禁止访问：客户访问许可过多</li><li>　　HTTP 403.16 - 禁止访问：客户证书不可信或者无效</li><li>　　HTTP 403.17 - 禁止访问：客户证书已经到期或者尚未生效</li><li>　　HTTP 404.1 - 无法找到 Web 站点</li><li>　　HTTP 404 - 无法找到文件</li><li>　　HTTP 405 - 资源被禁止</li><li>　　HTTP 406 - 无法接受</li><li>　　HTTP 407 - 要求代理身份验证</li><li>　　HTTP 410 - 永远不可用</li><li>　　HTTP 412 - 先决条件失败</li><li>　　HTTP 414 - 请求 - URI 太长</li><li>　　HTTP 500 - 内部服务器错误</li><li>　　HTTP 500.100 - 内部服务器错误 - ASP 错误</li><li>　　HTTP 500-11 服务器关闭</li><li>　　HTTP 500-12 应用程序重新启动</li><li>　　HTTP 500-13 - 服务器太忙</li><li>　　HTTP 500-14 - 应用程序无效</li><li>　　HTTP 500-15 - 不允许请求 global.asa</li><li>　　Error 501 - 未实现</li><li>　　HTTP 502 - 网关错误</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1xx:信息响应类，表示接收到请求并且继续处理 &lt;/p&gt;
+&lt;p&gt;2xx:处理成功响应类，表示动作被成功接收、理解和接受 &lt;/p&gt;
+&lt;p&gt;3xx:重定向响应类，为了完成指定的动作，必须接受进一步处理 &lt;/p&gt;
+&lt;p&gt;4xx:客户端错误，客户请求包含语法错误或者是不能正确执行 
+      
+    
+    </summary>
+    
+    
+      <category term="web" scheme="http://www.pangchen.net/tags/web/"/>
     
   </entry>
   
