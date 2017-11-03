@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.pangchen.net/"/>
-  <updated>2017-10-31T16:20:48.411Z</updated>
+  <updated>2017-11-03T13:07:10.814Z</updated>
   <id>http://www.pangchen.net/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《大型网站技术架构核心原理与案例分析》</title>
+    <link href="http://www.pangchen.net/2017/11/03/%E5%A4%A7%E5%9E%8B%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84/"/>
+    <id>http://www.pangchen.net/2017/11/03/大型网站技术架构/</id>
+    <published>2017-11-02T19:38:56.000Z</published>
+    <updated>2017-11-03T13:07:10.814Z</updated>
+    
+    <content type="html"><![CDATA[<p>这本书怎么说呢，属于科普类书籍，广度够了，无深度，作者绝对是个有情怀的人。</p><h2 id="大型网站架构演化"><a href="#大型网站架构演化" class="headerlink" title="大型网站架构演化"></a>大型网站架构演化</h2><h4 id="大型网站软件系统特点："><a href="#大型网站软件系统特点：" class="headerlink" title="大型网站软件系统特点："></a>大型网站软件系统特点：</h4><p>①高并发，大流量</p><p>②高可用</p><p>③海量数据</p><p>④用户分布广泛，网络情况复杂</p><p>⑤安全环境恶劣</p><p>⑥需求快速变更，发布频繁</p><p>⑦渐进式发展</p><h4 id="大型网站架构演化发展历程"><a href="#大型网站架构演化发展历程" class="headerlink" title="大型网站架构演化发展历程"></a>大型网站架构演化发展历程</h4><p><img src="../../../../images/daxingwangzhanjiagou001.png" alt="image"></p><p><img src="../../../../images/daxingwangzhanjiagou002.png" alt="image"></p><p><img src="../../../../images/daxingwangzhanjiagou003.png" alt="image"></p><p><img src="../../../../images/daxingwangzhanjiagou004.png" alt="image"></p><p><img src="../../../../images/daxingwangzhanjiagou005.png" alt="image"></p><h2 id="大型网站架构模式"><a href="#大型网站架构模式" class="headerlink" title="大型网站架构模式"></a>大型网站架构模式</h2><p>分层、分割、分布式、集群、缓存、异步、冗余备份、自动化CI（发布过程自动化、自动化代码管理、自动化测试、自动化安全检测、自动化部属）、安全。<br>第三章 大型网站核心架构要素</p><h4 id="3-1、性能"><a href="#3-1、性能" class="headerlink" title="3.1、性能"></a>3.1、性能</h4><h4 id="3-2、可用性"><a href="#3-2、可用性" class="headerlink" title="3.2、可用性"></a>3.2、可用性</h4><p>可用性指标：n个9，99.99%。</p><h4 id="3-3、伸缩性"><a href="#3-3、伸缩性" class="headerlink" title="3.3、伸缩性"></a>3.3、伸缩性</h4><p>是指不断向集群中加入服务器的手段来缓解不断上升的用户并发访问压力和不断增长的数据存储需求。</p><h4 id="3-4、扩展性"><a href="#3-4、扩展性" class="headerlink" title="3.4、扩展性"></a>3.4、扩展性</h4><p>增加新业务的难以程度。大型网站提供开放平台接口。</p><h4 id="3-5、安全性"><a href="#3-5、安全性" class="headerlink" title="3.5、安全性"></a>3.5、安全性</h4><h2 id="瞬时响应：网站的高性能架构"><a href="#瞬时响应：网站的高性能架构" class="headerlink" title="瞬时响应：网站的高性能架构"></a>瞬时响应：网站的高性能架构</h2><p>网站性能是客观指标，响应时间、吞吐量等。</p><h4 id="4-1、网站性能测试"><a href="#4-1、网站性能测试" class="headerlink" title="4.1、网站性能测试"></a>4.1、网站性能测试</h4><p>用户角度：响应时间</p><p>开发人员角度：响应延迟、系统吞吐量、并发处理能力、系统稳定性</p><p>运维人员角度：基础设施性能和资源利用率。网络运营商带宽、服务器硬件配置、数据中心网络架构、服务器和网络带宽资源利用率。</p><p>性能指标：响应时间、并发数、吞吐量（单位时间内系统处理请求的数量TPS）、性能计数器（CPU使用、磁盘IO）。</p><p>性能测试→负载测试→压力测试：递进关系。</p><h4 id="4-2、性能优化"><a href="#4-2、性能优化" class="headerlink" title="4.2、性能优化"></a>4.2、性能优化</h4><p>Web前端性能优化：</p><p>浏览器访问优化。①减少Http请求；②使用浏览器缓存；③启用压缩；④CSS放在页面最上面、JavaScript放在页面最下面；⑤减少Cookie传输。</p><p>CDN加速。静态资源缓存在CDN服务器上。</p><p>反向代理。请求转发。</p><p>应用服务器性能优化：</p><p>分布式缓存。JBoss Cache：需要更新同步的分布式缓存。Memcached：不互相通信的分布式缓存。</p><p>异步操作。削峰。<br>使用集群。</p><p>代码优化。①多线程；②资源复用：单例、对象池、数据库连接池；③数据结构；④垃圾回收。</p><p>存储性能优化：</p><p>固态硬盘。</p><p>RAID、HDFS。</p><h2 id="万无一失：网站的高可用架构"><a href="#万无一失：网站的高可用架构" class="headerlink" title="万无一失：网站的高可用架构"></a>万无一失：网站的高可用架构</h2><h4 id="5-1、网站可用性的度量与考核"><a href="#5-1、网站可用性的度量与考核" class="headerlink" title="5.1、网站可用性的度量与考核"></a>5.1、网站可用性的度量与考核</h4><p>业界习惯：多少个9。QQ满足4个9，Twitter还不足2个9。</p><p>可用性考核：对外是服务承诺，对内是考核指标。</p><p>绩效考核中的故障分 = 故障时间（分钟）× 故障权重。</p><h4 id="5-2、高可用的网站架构"><a href="#5-2、高可用的网站架构" class="headerlink" title="5.2、高可用的网站架构"></a>5.2、高可用的网站架构</h4><p>主要手段：数据和服务的冗余备份和实效转移。</p><h4 id="5-3、高可用的应用"><a href="#5-3、高可用的应用" class="headerlink" title="5.3、高可用的应用"></a>5.3、高可用的应用</h4><p>负载均衡：无状态服务的失效转移。通过心跳检测机制监测服务器状态。</p><p>Session服务器。</p><h4 id="5-4、高可用的服务"><a href="#5-4、高可用的服务" class="headerlink" title="5.4、高可用的服务"></a>5.4、高可用的服务</h4><p>分级管理、超时设置、异步调用、服务降级（服务端高压力时，有些人暂时无法访问，仅开放重要的人的访问权限）、幂等性设计。</p><h4 id="5-5、高可用的数据"><a href="#5-5、高可用的数据" class="headerlink" title="5.5、高可用的数据"></a>5.5、高可用的数据</h4><p>保护网站的数据就是保护企业的命脉！</p><p>CAP原理：数据持久性、数据可访问性、数据一致性。</p><p>数据备份：异步热备份（写Master与读Slave）、同步热备份。</p><p>失效转移：失效确认、访问转移、数据恢复。</p><h4 id="5-6、高可用网站的软件质量保证"><a href="#5-6、高可用网站的软件质量保证" class="headerlink" title="5.6、高可用网站的软件质量保证"></a>5.6、高可用网站的软件质量保证</h4><p>网站发布：过程和服务器宕机效果相同。关闭部分服务器。</p><p>自动化测试：ThoughtWorks的Selenium。</p><p>预发布验证：发布到测试环境（预发布服务器）上。</p><p>代码控制：Git、SVN版本管理。</p><p>自动化发布：火车发布模式。</p><p>灰度发布：让部分真实用户先使用预发布版本。</p><p>网站运行监控。用户行为日志收集、服务器性能监控、运行数据报告。<br>“事物总是先求生存，然后求发展。”</p><h2 id="永无止境：网站的伸缩性架构"><a href="#永无止境：网站的伸缩性架构" class="headerlink" title="永无止境：网站的伸缩性架构"></a>永无止境：网站的伸缩性架构</h2><h4 id="6-1、网站架构的伸缩性设计"><a href="#6-1、网站架构的伸缩性设计" class="headerlink" title="6.1、网站架构的伸缩性设计"></a>6.1、网站架构的伸缩性设计</h4><p>①根据功能进行物理分离实现伸缩；②单一功能通过集群实现伸缩。</p><h4 id="6-2、应用服务器集群的伸缩性设计"><a href="#6-2、应用服务器集群的伸缩性设计" class="headerlink" title="6.2、应用服务器集群的伸缩性设计"></a>6.2、应用服务器集群的伸缩性设计</h4><p>HTTP重定向负载均衡。欺骗性重定向：SEO作弊。</p><p>DNS域名解析负载均衡。</p><p>反向代理负载均衡。反向代理服务器需要配置双网卡和内部外部两套IP地址。</p><p>IP负载均衡。</p><p>数据链路层负载均衡。三角传输模式。又名直接路由方式（DR）。用的最广！LVS。</p><p>负载均衡算法。①轮询；②加权轮询；③随机；④最少连接；⑤原地址散列：保证同一个IP每次都访问同一个服务器。</p><h4 id="6-3、分布式缓存集群的伸缩性设计"><a href="#6-3、分布式缓存集群的伸缩性设计" class="headerlink" title="6.3、分布式缓存集群的伸缩性设计"></a>6.3、分布式缓存集群的伸缩性设计</h4><p>Memcached访问模型P107</p><p>一致性Hash算法。实现Key到缓存服务器的Hash映射。</p><p>“计算机的任何问题都可以通过增加一个虚拟层来解决！”</p><p>虚拟节点的一致性Hash算法。</p><h4 id="6-4、数据存储服务器集群的伸缩性设计"><a href="#6-4、数据存储服务器集群的伸缩性设计" class="headerlink" title="6.4、数据存储服务器集群的伸缩性设计"></a>6.4、数据存储服务器集群的伸缩性设计</h4><p>关系型数据库：主从读写分离。Cobar：分布式关系数据库访问代理，介于数据库服务器与应用服务器之间，无法执行跨表的JOIN操作。GreenPlum：支持跨表JOIN操作，但访问延迟较大。</p><p>NoSQL数据库：放弃了SQL和ACID。HBase：可分裂的HRegion及可伸缩的分布式文件系统HDFS。HMaster+Zookeeper（分布式一致性数据管理服务）+HRegionServer结构。</p><h2 id="随需应变：网站的可扩展架构"><a href="#随需应变：网站的可扩展架构" class="headerlink" title="随需应变：网站的可扩展架构"></a>随需应变：网站的可扩展架构</h2><h2 id="固若金汤：网站的安全架构"><a href="#固若金汤：网站的安全架构" class="headerlink" title="固若金汤：网站的安全架构"></a>固若金汤：网站的安全架构</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;这本书怎么说呢，属于科普类书籍，广度够了，无深度，作者绝对是个有情怀的人。&lt;/p&gt;
+&lt;h2 id=&quot;大型网站架构演化&quot;&gt;&lt;a href=&quot;#大型网站架构演化&quot; class=&quot;headerlink&quot; title=&quot;大型网站架构演化&quot;&gt;&lt;/a&gt;大型网站架构演化&lt;/h2&gt;&lt;h4 
+      
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>如何让我遇见你，在你最美的时候-2010</title>
@@ -161,62 +185,6 @@
   </entry>
   
   <entry>
-    <title>《吸金广告》</title>
-    <link href="http://www.pangchen.net/2017/10/09/%E5%90%B8%E9%87%91%E5%B9%BF%E5%91%8A/"/>
-    <id>http://www.pangchen.net/2017/10/09/吸金广告/</id>
-    <published>2017-10-08T19:38:56.000Z</published>
-    <updated>2017-10-15T12:08:27.720Z</updated>
-    
-    <content type="html"><![CDATA[<hr><ul><li>书名：吸金广告</li><li>作者：德鲁·埃里克·惠特曼</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/xijinguanggao.png" alt="image"></li></ul><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;书名：吸金广告&lt;/li&gt;
-&lt;li&gt;作者：德鲁·埃里克·惠特曼&lt;/li&gt;
-&lt;li&gt;读书笔记如下：&lt;/li&gt;
-&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/xijinguanggao.png&quot; alt=&quot;image&quot;&gt;&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《自卑与超越》</title>
-    <link href="http://www.pangchen.net/2017/10/09/%E8%87%AA%E5%8D%91%E4%B8%8E%E8%B6%85%E8%B6%8A/"/>
-    <id>http://www.pangchen.net/2017/10/09/自卑与超越/</id>
-    <published>2017-10-08T19:38:56.000Z</published>
-    <updated>2017-10-15T12:05:41.153Z</updated>
-    
-    <content type="html"><![CDATA[<hr><ul><li>书名：自卑与超越</li><li>作者：阿尔弗雷德·阿德勒</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/zibeiyuchaoyue.png" alt="image"></li></ul><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;书名：自卑与超越&lt;/li&gt;
-&lt;li&gt;作者：阿尔弗雷德·阿德勒&lt;/li&gt;
-&lt;li&gt;读书笔记如下：&lt;/li&gt;
-&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/zibeiyuchaoyue.png&quot; alt=&quot;image&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>《细节营销》</title>
     <link href="http://www.pangchen.net/2017/10/09/%E7%BB%86%E8%8A%82%E8%90%A5%E9%94%80/"/>
     <id>http://www.pangchen.net/2017/10/09/细节营销/</id>
@@ -264,6 +232,62 @@
 &lt;li&gt;作者：高洪岩&lt;/li&gt;
 &lt;li&gt;读书笔记如下：&lt;/li&gt;
 &lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/JavaMutilThread.png&quot; alt=&quot;imag
+      
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《自卑与超越》</title>
+    <link href="http://www.pangchen.net/2017/10/09/%E8%87%AA%E5%8D%91%E4%B8%8E%E8%B6%85%E8%B6%8A/"/>
+    <id>http://www.pangchen.net/2017/10/09/自卑与超越/</id>
+    <published>2017-10-08T19:38:56.000Z</published>
+    <updated>2017-10-15T12:05:41.153Z</updated>
+    
+    <content type="html"><![CDATA[<hr><ul><li>书名：自卑与超越</li><li>作者：阿尔弗雷德·阿德勒</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/zibeiyuchaoyue.png" alt="image"></li></ul><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;书名：自卑与超越&lt;/li&gt;
+&lt;li&gt;作者：阿尔弗雷德·阿德勒&lt;/li&gt;
+&lt;li&gt;读书笔记如下：&lt;/li&gt;
+&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/zibeiyuchaoyue.png&quot; alt=&quot;image&quot;&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《吸金广告》</title>
+    <link href="http://www.pangchen.net/2017/10/09/%E5%90%B8%E9%87%91%E5%B9%BF%E5%91%8A/"/>
+    <id>http://www.pangchen.net/2017/10/09/吸金广告/</id>
+    <published>2017-10-08T19:38:56.000Z</published>
+    <updated>2017-10-15T12:08:27.720Z</updated>
+    
+    <content type="html"><![CDATA[<hr><ul><li>书名：吸金广告</li><li>作者：德鲁·埃里克·惠特曼</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/xijinguanggao.png" alt="image"></li></ul><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;书名：吸金广告&lt;/li&gt;
+&lt;li&gt;作者：德鲁·埃里克·惠特曼&lt;/li&gt;
+&lt;li&gt;读书笔记如下：&lt;/li&gt;
+&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/xijinguanggao.png&quot; alt=&quot;image&quot;&gt;&lt;
       
     
     </summary>
@@ -512,35 +536,6 @@
 &lt;li&gt;作者：Avinash K. Dixit &amp;amp; Barry J. Nalebuff&lt;/li&gt;
 &lt;li&gt;读书笔记如下：&lt;/li&gt;
 &lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/ce
-      
-    
-    </summary>
-    
-    
-      <category term="读书笔记" scheme="http://www.pangchen.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《浪潮之巅》上册</title>
-    <link href="http://www.pangchen.net/2017/04/09/%E6%B5%AA%E6%BD%AE%E4%B9%8B%E5%B7%85/"/>
-    <id>http://www.pangchen.net/2017/04/09/浪潮之巅/</id>
-    <published>2017-04-08T19:38:56.000Z</published>
-    <updated>2017-10-18T15:34:29.773Z</updated>
-    
-    <content type="html"><![CDATA[<hr><ul><li>书名：浪潮之巅·上册</li><li>作者：吴军</li><li>读书笔记如下：</li><li>（右键查看大图）<img src="../../../../images/《浪潮之巅》上册.png" alt="image"></li></ul><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;书名：浪潮之巅·上册&lt;/li&gt;
-&lt;li&gt;作者：吴军&lt;/li&gt;
-&lt;li&gt;读书笔记如下：&lt;/li&gt;
-&lt;li&gt;（右键查看大图）&lt;img src=&quot;../../../../images/《浪潮之巅》上册.png&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
-&lt;/ul&gt;
       
     
     </summary>
