@@ -137,6 +137,76 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2016/05/10/数学：巴比尔定理/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>数学：巴比尔定理</span>
+                    </h2>
+                <div class="abstract-content">
+                    构造一个跟圆一样，任意方向上宽度都一样的图形。
+构造方法：如图，单位长度等边三角形ABC，各边延长一个单位1，得DEFGHI各点，然后以A为圆心，AD为半径连接DE，B为圆心，BE为半径连接EF，其他各曲线同理。
+
+如下图，这个图形各个方向宽度都为3
+
+巴比尔定理：类似上面这种曲线图的周长跟圆一样 = d*π。（d为定长，上图d=3）。
+实际应用：突然发现，我们的井盖等等东西不用再一成不变设计成圆形的了
+汽车轮子什么的也可以做成这种形状
+
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 数学/算法>数学/算法</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/05/10</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2016/04/17/分布式数据库事务/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>分布式数据库事务</span>
+                    </h2>
+                <div class="abstract-content">
+                    在分布式数据库环境中，一个数据库事务可以更新多个场地上的数据，这种数据库事务称为分布式事务。
+　　分布式事务必须满足传统事务的特性，即原子性，一致性，分离性和持久性。但是分布式事务处理过程中，某些场地(Server)可能发生故障，或 者由于网络发生故障而无法访问到某些场地。为了防止分布式系统部分失败时产生数据的不一致性。在分布式事务的控制中采用了两阶段提交协议（Two- Phase Commit Protocol）。即事务的提交分为两个阶段：
+
+　　预提交阶段(Pre-Commit Phase)
+　　决策后阶段（Post-Decision Phase）
+
+　　两阶段提交用来协调参与一个更...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = 数据库>数据库</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2016/04/17</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2016/04/01/分布式数据库概要/" >
                     <h2 class="abstract-title">
                         
@@ -389,77 +459,6 @@ http://nodeapi.ucdok.com/#/api/
                 <!-- date  -->
                 <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2015/07/17</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2015/07/14/jQuery常用函数（一）：基础/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>jQuery常用函数（一）：基础</span>
-                    </h2>
-                <div class="abstract-content">
-                    $(‘元素’).each(function（）{do something})；
-1234567891011121314151617&lt;script type=&quot;text/javascript&quot;&gt;	$(function()&#123;				$(&apos;li&apos;).each(function()&#123;			console.log($(this).text());		&#125;);	&#125;);&lt;/script&gt;&lt;body&gt;	&lt;ul&gt;		&lt;li&gt;1&lt;/li&gt;		&lt;li&gt...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = web>web</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2015/07/14</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2015/07/14/JS实现判断input输入是否为数字/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>JS实现判断input输入是否为数字</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-先了解下各事件的区别
-
-
-keydown：在控件有焦点的情况下按下键时发生
-keypress：在控件有焦点的情况下按下键时发生
-keyup：   在控件有焦点的情况下释放键时发生
-
-
-意义
-
-
-keypress主要用来接收字母、数字等ANSI字符。keydown 和 keyup 事件过程通常可以捕获键盘除了PrScrn所有按键 （这里不讨论特殊键盘的特殊键）
-keypress 只能捕获单个字符，keydown 和 keyup 可以捕获组合键
-keypress 不显示键盘的物理状态（SHIFT键），而只是传递一个字符。keypress 将每个字符的大、小写形式作为不同的键代码解释，即作为...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = web>web</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2015/07/14</span>
                 </div>
             </div>
         </article>
@@ -1174,7 +1173,25 @@ keypress 不显示键盘的物理状态（SHIFT键），而只是传递一个字
     
     
     
-    <div class="total-archive"> Total : 41 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 43 </div>
     
     <div class="post-archive">
     
@@ -1186,12 +1203,22 @@ keypress 不显示键盘的物理状态（SHIFT键），而只是传递一个字
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python wechat API (itchat)/" >Wechat API (itchat)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/《定位》/" >《定位》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python wechat API (itchat)/" >Wechat API (itchat)</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python常见错误汇总（持续更新）/" >python常见错误汇总（持续更新）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/Windows Error Code详解/" >Windows Error Code详解</a>
         </li>
     
     
@@ -1236,16 +1263,6 @@ keypress 不显示键盘的物理状态（SHIFT键），而只是传递一个字
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/自卑与超越/" >《自卑与超越》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/Java多线程编程核心技术/" >《Java多线程编程核心技术》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/吸金广告/" >《吸金广告》</a>
         </li>
     
@@ -1256,12 +1273,22 @@ keypress 不显示键盘的物理状态（SHIFT键），而只是传递一个字
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2017/10/06/心胜/" >《心胜》</a>
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/Java多线程编程核心技术/" >《Java多线程编程核心技术》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/自卑与超越/" >《自卑与超越》</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2017/10/06/赢/" >《赢》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2017/10/06/心胜/" >《心胜》</a>
         </li>
     
     

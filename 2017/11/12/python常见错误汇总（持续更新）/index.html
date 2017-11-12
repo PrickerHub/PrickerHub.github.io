@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        庞晨个人网站
+        python常见错误汇总（持续更新） · 庞晨个人网站
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -89,11 +89,22 @@
     
 </head>
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >PangChen&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">python常见错误汇总（持续更新）</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>PangChen's Blog.</a>
 </header>
@@ -101,63 +112,110 @@
         <div class="site-intro">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510367009&di=0e1339aeb55312e9aa4dca2ca815c963&imgtype=jpg&er=1&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F53796ee08b7e1.jpg)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
+            python常见错误汇总（持续更新）
+            <!-- 404 -->
+            
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+        </p>
+        <!-- 404 -->
+        
         <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
+    
+</div>
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/11/12</span>
+            </div>
         
     </div>
 </div>
         <div class="container">
-            <main class="main index-page">
+            <main class="main post-page">
+    <article class="article-entry">
+        <hr>
+<ul>
+<li>问题描述：</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天用itchat接口，执行登录的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">itchat.auto_login()</div></pre></td></tr></table></figure>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结果一运行报了：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WindowsError: [Error 1155] : &apos;QR.png&apos;</div></pre></td></tr></table></figure>
+<ul>
+<li>错误原因</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查了下1155错误是“没有应用程序与此操作的指定文件有关联。 ”跳到函数的底层调用（感谢python可以直接看到接口源码）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">os.startfile(&apos;QR.png&apos;)</div></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相当于双击打开QR.png，卧槽，我的电脑竟然没有能打开.png图片的程序。下了个图片查看器，设置为.png的默认打开程序，问题解决。</p>
+<hr>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+            <li class="next">
+                <a href= "/2017/11/12/Windows Error Code详解/" title= Windows Error Code详解 >
+                    <span>Next Post</span>
+                    <span>Windows Error Code详解</span>
+                </a>
+            </li>
+        
+        
+            <li class="previous">
+                <a href= "/2017/11/12/《定位》/" title= 《定位》 >
+                    <span>Previous Post</span>
+                    <span>《定位》</span>
+                </a>
+            </li>
+        
+    </ul>
+
+
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
     
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2015/06/29/Linux下常用命令/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Linux下常用命令</span>
-                    </h2>
-                <div class="abstract-content">
-                    第一节：ls -a 显示所有文件，包括隐藏文件   -l  详细信息显示   -d 查看目录属性
-第二节：mkdir -p  在没有上级目录的情况下创建         可以创建多个dir，中间以空格分隔cd 【目录名】  到此目录cd..  回到上一级
-pwd 显示当前目录地址
-rmdir  删除空目录
-cp -rp 【复制文件目录】【目标文件目录】 复制文件到目标     -r  复制目录     -p 保留文件属性
-mv 剪切、改名
-rm -r 删除目录     -f  强行执行（当目录下面还有别的文件时，一并删除）
-touch + 【文件名.后缀】 创建空文件
-cat 【文件.后...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = Java>Java</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2015/06/29</span>
-                </div>
-            </div>
-        </article>
-    
-    <!-- paginator  -->
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: "python常见错误汇总（持续更新）", // 可选。默认为 location.href
+        owner: 'PrickerHub',
+        repo: 'PrickerHub.github.io',
+        oauth: {
+            client_id: '6667b8cb33a30286d744',
+            client_secret: 'ce241611416d21bcf66dcaae3261efa027451362',
+        },
+    })
+    gitment.render('container')
+
+</script>
+
+    <!--PC版-->
+
     
 </main>
             <!-- profile -->
