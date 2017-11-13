@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        数学：巴比尔定理 · 庞晨个人网站
+        多线程socket实践 · 庞晨个人网站
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -102,7 +102,7 @@
                 <a href="/" >PangChen&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">数学：巴比尔定理</a>
+                <a href="#" class="post-name">多线程socket实践</a>
             </div>
     </div>
     
@@ -123,7 +123,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            数学：巴比尔定理
+            多线程socket实践
             <!-- 404 -->
             
         </h1>
@@ -141,13 +141,13 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 数学/算法>数学/算法</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2016/05/10</span>
+                <span class="post-intro-time">2017/11/13</span>
             </div>
         
     </div>
@@ -155,31 +155,36 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>构造一个跟圆一样，任意方向上宽度都一样的图形。</p>
-<p>构造方法：如图，单位长度等边三角形ABC，各边延长一个单位1，得DEFGHI各点，然后以A为圆心，AD为半径连接DE，B为圆心，BE为半径连接EF，其他各曲线同理。</p>
-<p><img src="http://static.oschina.net/uploads/space/2015/1024/220805_eqN3_2400412.png" alt="image"></p>
-<p>如下图，这个图形各个方向宽度都为3</p>
-<p><img src="http://static.oschina.net/uploads/space/2015/1024/221028_oE5F_2400412.png" alt="image"></p>
-<p>巴比尔定理：类似上面这种曲线图的周长跟圆一样 = d*π。（d为定长，上图d=3）。</p>
-<p>实际应用：突然发现，我们的井盖等等东西不用再一成不变设计成圆形的了</p>
-<p>汽车轮子什么的也可以做成这种形状</p>
+        <ul>
+<li>内容比较简单，直接看源码+注释</li>
+</ul>
+<hr>
+<blockquote>
+<p>Server端</p>
+</blockquote>
+<ul>
+<li>服务端每接受一个client的连接请求，就启一个独立的线程去处理请求</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"># -*- coding:utf-8 -*-</div><div class="line"></div><div class="line">import socket</div><div class="line">import threading</div><div class="line">from time import sleep</div><div class="line"></div><div class="line">HOST = &apos;0.0.0.0&apos;</div><div class="line">PORT = 12345</div><div class="line">SERVERADDR = (HOST, PORT)</div><div class="line"></div><div class="line">def response(clientSocket, clientAddr):</div><div class="line">    print(&quot;receive connection from %s&quot;%str(clientAddr))</div><div class="line">    while True:</div><div class="line">        #接收客户端发来的数据并打印</div><div class="line">        clientData = clientSocket.recv(1024)</div><div class="line">        print(clientData.decode(&apos;utf-8&apos;))</div><div class="line">        stopSignal = (clientData.decode(&apos;utf-8&apos;).upper() == &apos;QUIT&apos;)</div><div class="line">        if stopSignal:</div><div class="line">            break</div><div class="line">        clientSocket.close()</div><div class="line"></div><div class="line">#启server端监听socket</div><div class="line">serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</div><div class="line">serverSocket.bind(SERVERADDR)</div><div class="line">serverSocket.listen(50)</div><div class="line">print(&quot;waiting for connecting...&quot;)</div><div class="line"></div><div class="line">while True:</div><div class="line">    sleep(0.1)</div><div class="line">    clientSocket, clientAddr = serverSocket.accept()</div><div class="line">    #每来一个client端的连接，启一个线程去处理客户端数据</div><div class="line">    clientDataProcessingThread = threading.Thread(target=response, args=(clientSocket, clientAddr))</div><div class="line">    clientDataProcessingThread.start()</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>Client端</p>
+</blockquote>
+<ul>
+<li>可以启多个客户端</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"># -*- coding:utf-8 -*-</div><div class="line"></div><div class="line">from socket import *</div><div class="line"></div><div class="line">class TcpClient:</div><div class="line">    HOST = &apos;127.0.0.1&apos;</div><div class="line">    PORT = 12345</div><div class="line">    BUFSIZE = 1024</div><div class="line">    SERVERADDR = (HOST, PORT)</div><div class="line"></div><div class="line">    def __init__(self):</div><div class="line">        self.client = socket(AF_INET, SOCK_STREAM)</div><div class="line">        #发起连接服务端127.0.0.1:12345</div><div class="line">        self.client.connect(self.SERVERADDR)</div><div class="line">        while True:</div><div class="line">            #接收键盘输入</div><div class="line">            sendData = input(&apos;&gt;&apos;)</div><div class="line">            if not sendData:</div><div class="line">                break</div><div class="line">            #发送到服务端</div><div class="line">            self.client.send(sendData.encode(&apos;utf-8&apos;))</div><div class="line">            print(&apos;Send data to %s&apos;%(self.HOST))</div><div class="line">            if sendData.upper() == &apos;QUIT&apos;:</div><div class="line">                break</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    client = TcpClient()</div></pre></td></tr></table></figure>
+<hr>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2016/05/12/数学：波尔约-格维也纳定理/" title= 数学：波尔约-格维也纳定理 >
-                    <span>Next Post</span>
-                    <span>数学：波尔约-格维也纳定理</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2016/04/17/分布式数据库事务/" title= 分布式数据库事务 >
+                <a href= "/2017/11/12/python常见错误汇总（持续更新）/" title= python常见错误汇总（持续更新） >
                     <span>Previous Post</span>
-                    <span>分布式数据库事务</span>
+                    <span>python常见错误汇总（持续更新）</span>
                 </a>
             </li>
         
@@ -196,7 +201,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        // id: "数学：巴比尔定理", // 可选。默认为 location.href
+        // id: "多线程socket实践", // 可选。默认为 location.href
         owner: 'PrickerHub',
         repo: 'PrickerHub.github.io',
         oauth: {
