@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        《策略思维》 · 庞晨个人网站
+        ICMP详解 · 庞晨个人网站
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -102,7 +102,7 @@
                 <a href="/" >PangChen&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">《策略思维》</a>
+                <a href="#" class="post-name">ICMP详解</a>
             </div>
     </div>
     
@@ -123,7 +123,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            《策略思维》
+            ICMP详解
             <!-- 404 -->
             
         </h1>
@@ -141,13 +141,13 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 读书笔记>读书笔记</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/04/09</span>
+                <span class="post-intro-time">2017/12/17</span>
             </div>
         
     </div>
@@ -156,30 +156,32 @@
             <main class="main post-page">
     <article class="article-entry">
         <hr>
-<ul>
-<li>书名：策略思维</li>
-<li>作者：Avinash K. Dixit &amp; Barry J. Nalebuff</li>
-<li>读书笔记如下：</li>
-<li>（右键查看大图）<img src="../../../../images/celvesiwei.png" alt="image"></li>
-</ul>
+<blockquote>
+<p>背景</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ICMP是ping包协议，用python模拟ping构建socket并发送ping包报文，打印接收到的到回应报文。</p>
+<hr>
+<blockquote>
+<p>ICMP报文详解</p>
+</blockquote>
+<p><img src="http://images.cnblogs.com/cnblogs_com/scrat/305dd7ea50e1706daeafd55c.jpg" alt="image"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//定义ICMP首部</div><div class="line">typedef struct _icmphdr&#123;</div><div class="line">unsigned char i_type; //8位类型</div><div class="line">unsigned char i_code; //8位代码</div><div class="line">unsigned short i_cksum; //16位校验和, 从TYPE开始,直到最后一位用户数据,如果为字节数为奇数则补充一位</div><div class="line">unsigned short i_id ; //识别号（一般用进程号作为识别号）, 用于匹配ECHO和ECHO REPLY包</div><div class="line">unsigned short i_seq ; //报文序列号, 用于标记ECHO报文顺序</div><div class="line">unsigned int timestamp; //时间戳</div><div class="line">&#125;ICMP_HEADER;</div></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>Python代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div></pre></td><td class="code"><pre><div class="line">from socket import *</div><div class="line">import os</div><div class="line">import sys</div><div class="line">import struct</div><div class="line">import time</div><div class="line">import select</div><div class="line">import binascii  </div><div class="line"></div><div class="line">ICMP_ECHO_REQUEST = 8</div><div class="line"></div><div class="line">def checksum(str): </div><div class="line">	csum = 0</div><div class="line">	countTo = (len(str) / 2) * 2</div><div class="line">	</div><div class="line">	count = 0</div><div class="line">	while count &lt; countTo:</div><div class="line">		thisVal = ord(str[count+1]) * 256 + ord(str[count]) </div><div class="line">		csum = csum + thisVal </div><div class="line">		csum = csum &amp; 0xffffffffL  </div><div class="line">		count = count + 2</div><div class="line">	</div><div class="line">	if countTo &lt; len(str):</div><div class="line">		csum = csum + ord(str[len(str) - 1])</div><div class="line">		csum = csum &amp; 0xffffffffL</div><div class="line">	</div><div class="line">	csum = (csum &gt;&gt; 16) + (csum &amp; 0xffff)</div><div class="line">	csum = csum + (csum &gt;&gt; 16)</div><div class="line">	answer = ~csum </div><div class="line">	answer = answer &amp; 0xffff </div><div class="line">	answer = answer &gt;&gt; 8 | (answer &lt;&lt; 8 &amp; 0xff00)</div><div class="line">	return answer </div><div class="line">	</div><div class="line">def receiveOnePing(mySocket, ID, timeout, destAddr):</div><div class="line">	timeLeft = timeout</div><div class="line">	</div><div class="line">	while 1: </div><div class="line">		startedSelect = time.time()</div><div class="line">		whatReady = select.select([mySocket], [], [], timeLeft)</div><div class="line">		howLongInSelect = (time.time() - startedSelect)</div><div class="line">		if whatReady[0] == []: # Timeout</div><div class="line">			return &quot;Request timed out.&quot;</div><div class="line">	</div><div class="line">		timeReceived = time.time() </div><div class="line">		recPacket, addr = mySocket.recvfrom(1024)</div><div class="line">		</div><div class="line">		# Fetch the ICMPHeader fromt the IP</div><div class="line">		icmpHeader = recPacket[20:28]</div><div class="line">		rawTTL = struct.unpack(&quot;s&quot;, recPacket[8])[0]  </div><div class="line">		# binascii -- Convert between binary and ASCII  </div><div class="line">		TTL = int(binascii.hexlify(str(rawTTL)), 16)</div><div class="line">		</div><div class="line">		icmpType, code, checksum, packetID, sequence = struct.unpack(&quot;bbHHh&quot;, icmpHeader)</div><div class="line">		</div><div class="line">		if packetID == ID:</div><div class="line">			bytes = struct.calcsize(&quot;d&quot;) </div><div class="line">			timeSent = struct.unpack(&quot;d&quot;, recPacket[28:28 + bytes])[0]</div><div class="line">			return &quot;Reply from %s: bytes=%d time=%f5ms TTL=%d&quot; % (destAddr, len(recPacket), (timeReceived - timeSent)*1000, TTL)</div><div class="line">		</div><div class="line">		timeLeft = timeLeft - howLongInSelect</div><div class="line">		if timeLeft &lt;= 0:</div><div class="line">			return &quot;Request timed out.&quot;</div><div class="line">	</div><div class="line">def sendOnePing(mySocket, destAddr, ID):</div><div class="line">	# Header is type (8), code (8), checksum (16), id (16), sequence (16)</div><div class="line">	</div><div class="line">	myChecksum = 0</div><div class="line">	# Make a dummy header with a 0 checksum</div><div class="line">	# struct -- Interpret strings as packed binary data</div><div class="line">	header = struct.pack(&quot;bbHHh&quot;, ICMP_ECHO_REQUEST, 0, myChecksum, ID, 1)</div><div class="line">	data = struct.pack(&quot;d&quot;, time.time())</div><div class="line">	# Calculate the checksum on the data and the dummy header.</div><div class="line">	myChecksum = checksum(header + data)</div><div class="line">	</div><div class="line">	# Get the right checksum, and put in the header</div><div class="line">	if sys.platform == &apos;darwin&apos;:</div><div class="line">		# Convert 16-bit integers from host to network  byte order</div><div class="line">		myChecksum = htons(myChecksum) &amp; 0xffff		</div><div class="line">	else:</div><div class="line">		myChecksum = htons(myChecksum)</div><div class="line">		</div><div class="line">	header = struct.pack(&quot;bbHHh&quot;, ICMP_ECHO_REQUEST, 0, myChecksum, ID, 1)</div><div class="line">	packet = header + data</div><div class="line">	</div><div class="line">	mySocket.sendto(packet, (destAddr, 1)) # AF_INET address must be tuple, not str</div><div class="line">	# Both LISTS and TUPLES consist of a number of objects</div><div class="line">	# which can be referenced by their position number within the object.</div><div class="line">	</div><div class="line">def doOnePing(destAddr, timeout): </div><div class="line">	icmp = getprotobyname(&quot;icmp&quot;)</div><div class="line">	# SOCK_RAW is a powerful socket type. For more details:   http://sock-raw.org/papers/sock_raw</div><div class="line"></div><div class="line">	mySocket = socket(AF_INET, SOCK_RAW, icmp)</div><div class="line">	</div><div class="line">	myID = os.getpid() &amp; 0xFFFF  # Return the current process i</div><div class="line">	sendOnePing(mySocket, destAddr, myID)</div><div class="line">	delay = receiveOnePing(mySocket, myID, timeout, destAddr)</div><div class="line">	</div><div class="line">	mySocket.close()</div><div class="line">	return delay</div><div class="line">	</div><div class="line">def ping(host, timeout=1):</div><div class="line">	# timeout=1 means: If one second goes by without a reply from the server,</div><div class="line">	# the client assumes that either the client&apos;s ping or the server&apos;s pong is lost</div><div class="line">	dest = gethostbyname(host)</div><div class="line">	print &quot;Pinging &quot; + dest + &quot; using Python:&quot;</div><div class="line">	print &quot;&quot;</div><div class="line">	# Send ping requests to a server separated by approximately one second</div><div class="line">	while 1 :</div><div class="line">		delay = doOnePing(dest, timeout)</div><div class="line">		print delay</div><div class="line">		time.sleep(1)# one second</div><div class="line">	return delay</div><div class="line">	</div><div class="line">ping(&quot;baidu.com&quot;)</div></pre></td></tr></table></figure>
 <hr>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2017/06/12/寿司/" title= 《寿司》 >
-                    <span>Next Post</span>
-                    <span>《寿司》</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2017/04/09/浪潮之巅/" title= 《浪潮之巅》上册 >
+                <a href= "/2017/12/03/Docker&Docker-machine 入门实践/" title= Docker&Docker-machine 入门实践 >
                     <span>Previous Post</span>
-                    <span>《浪潮之巅》上册</span>
+                    <span>Docker&Docker-machine 入门实践</span>
                 </a>
             </li>
         
@@ -196,7 +198,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        // id: "《策略思维》", // 可选。默认为 location.href
+        // id: "ICMP详解", // 可选。默认为 location.href
         owner: 'PrickerHub',
         repo: 'PrickerHub.github.io',
         oauth: {

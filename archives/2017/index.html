@@ -124,6 +124,44 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2017/12/17/ICMP详解/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>ICMP详解</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+
+背景
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ICMP是ping包协议，用python模拟ping构建socket并发送ping包报文，打印接收到的到回应报文。
+
+
+ICMP报文详解
+
+
+123456789//定义ICMP首部typedef struct _icmphdr&#123;unsigned char i_type; //8位类型unsigned char i_code; //8位代码unsigned short i_cksum; //16位校验和, 从TYPE开始,直到最后一位用户数据,如果为字节数为奇数则补充一位unsigne...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/12/17</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2017/12/03/Docker&Docker-machine 入门实践/" >
                     <h2 class="abstract-title">
                         
@@ -346,34 +384,17 @@ Server端
     
     
         <article class="index-post">
-            <a class="content-show-full" href = "/2017/11/12/《定位》/" >
+            <a class="content-show-full" href = "/2017/11/12/python wechat API (itchat)/" >
                     <h2 class="abstract-title">
                         
-                        <span>《定位》</span>
+                        <span>Wechat API (itchat)</span>
                     </h2>
                 <div class="abstract-content">
-                    
+                    安装
+sudo pip install itchat
 
-书名：定位——有史以来对美国营销影响最大的观念
-作者：[美] AI Ries &amp; Jack Trout
-读后感：聚焦、定位、行动，不仅是产品的营销，也是自我的营销。
-
-
-
-背景
-
-三次生产力革命：
-
-泰勒“科学管理”。唯物史观，大幅提升体力劳动者的生产力。
-德鲁克“管理”。管理学，大幅提升了组织的生产力，让社会容纳如此巨大的知识群体，并让他们创造绩效成为可能。社会的关键资源不再是资本，而是知识。泰勒催生了一个知识社会，德鲁克催生了竞争社会。从“稀缺经济”到“过剩经济”。
-特劳特“定位”。“过剩经济”带来的选择暴力。
-
-
-
-何为定位
-
-
-定位的基本方法，不是去创造某种新的、不同...
+登录
+itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是这种登录的方式确实短时间的登录，并不会保留登录的状态，也就是下次登录时还是需要扫描二维码，如果加上hotReload==True,那么就会保留登录的状态，至少在后面的几次登录过程中不会再次扫描二维码，该参数生成一个静态文件itchat.pkl用于存储登录状态退出及登录完成后调用的特定的方法这里主要使用的是灰调函数的方法,登录完成后的方法需要赋值在 loginCallback 中退出后的方法,需要赋值在 exitCallback 中.若不设置 log...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -381,7 +402,7 @@ Server端
                 
                 <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 读书笔记>读书笔记</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
     
 </div>
                 
@@ -445,38 +466,6 @@ Windows Error Code详解
 错误原因
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查了下1155错误是“没有应用程序与此操作的指定文件有关联。 ”跳到函数的底层调用（感谢python可以直...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/11/12</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/11/12/python wechat API (itchat)/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Wechat API (itchat)</span>
-                    </h2>
-                <div class="abstract-content">
-                    安装
-sudo pip install itchat
-
-登录
-itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是这种登录的方式确实短时间的登录，并不会保留登录的状态，也就是下次登录时还是需要扫描二维码，如果加上hotReload==True,那么就会保留登录的状态，至少在后面的几次登录过程中不会再次扫描二维码，该参数生成一个静态文件itchat.pkl用于存储登录状态退出及登录完成后调用的特定的方法这里主要使用的是灰调函数的方法,登录完成后的方法需要赋值在 loginCallback 中退出后的方法,需要赋值在 exitCallback 中.若不设置 log...
                 </div>
             </a>
             <div class="abstract-post-meta">
@@ -1251,7 +1240,64 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     
     
-    <div class="total-archive"> Total : 49 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 50 </div>
     
     <div class="post-archive">
     
@@ -1260,6 +1306,11 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/17</span><a class="archive-post-title" href= "/2017/12/17/ICMP详解/" >ICMP详解</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1293,22 +1344,22 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/Windows Error Code详解/" >Windows Error Code详解</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/《定位》/" >《定位》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python wechat API (itchat)/" >Wechat API (itchat)</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python常见错误汇总（持续更新）/" >python常见错误汇总（持续更新）</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python常见错误汇总（持续更新）/" >python常见错误汇总（持续更新）</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/Windows Error Code详解/" >Windows Error Code详解</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python wechat API (itchat)/" >Wechat API (itchat)</a>
         </li>
     
     
@@ -1353,7 +1404,7 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/细节营销/" >《细节营销》</a>
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/吸金广告/" >《吸金广告》</a>
         </li>
     
     
@@ -1363,12 +1414,12 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/吸金广告/" >《吸金广告》</a>
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/自卑与超越/" >《自卑与超越》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/自卑与超越/" >《自卑与超越》</a>
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/细节营销/" >《细节营销》</a>
         </li>
     
     
@@ -1413,12 +1464,12 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href= "/2017/04/09/浪潮之巅/" >《浪潮之巅》上册</a>
+            <span class="archive-post-date">04/09</span><a class="archive-post-title" href= "/2017/04/09/策略思维/" >《策略思维》</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/09</span><a class="archive-post-title" href= "/2017/04/09/策略思维/" >《策略思维》</a>
+            <span class="archive-post-date">04/09</span><a class="archive-post-title" href= "/2017/04/09/浪潮之巅/" >《浪潮之巅》上册</a>
         </li>
     
     
@@ -1511,12 +1562,12 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/14</span><a class="archive-post-title" href= "/2015/07/14/JS实现判断input输入是否为数字/" >JS实现判断input输入是否为数字</a>
+            <span class="archive-post-date">07/14</span><a class="archive-post-title" href= "/2015/07/14/jQuery常用函数（一）：基础/" >jQuery常用函数（一）：基础</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/14</span><a class="archive-post-title" href= "/2015/07/14/jQuery常用函数（一）：基础/" >jQuery常用函数（一）：基础</a>
+            <span class="archive-post-date">07/14</span><a class="archive-post-title" href= "/2015/07/14/JS实现判断input输入是否为数字/" >JS实现判断input输入是否为数字</a>
         </li>
     
     
