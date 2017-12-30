@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        Docker&amp;Docker-machine 入门实践 · 庞晨个人网站
+        Maven菜狗指南 · 庞晨个人网站
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -102,7 +102,7 @@
                 <a href="/" >PangChen&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Docker&Docker-machine 入门实践</a>
+                <a href="#" class="post-name">Maven菜狗指南</a>
             </div>
     </div>
     
@@ -123,7 +123,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Docker&Docker-machine 入门实践
+            Maven菜狗指南
             <!-- 404 -->
             
         </h1>
@@ -141,13 +141,13 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = 框架>框架</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = web>web</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/12/03</span>
+                <span class="post-intro-time">2017/12/30</span>
             </div>
         
     </div>
@@ -157,150 +157,53 @@
     <article class="article-entry">
         <hr>
 <blockquote>
-<p>简介</p>
+<p>Maven简介</p>
 </blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Docker是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的Linux机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通俗点说，你可以随意将别人的整个应用移植到你的linux机上，然后发布。如下图，很形象。</p>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b10000_10000&amp;sec=1512274574&amp;di=9dd625728fb6f079fdfa247f894d82e8&amp;src=http://static.open-open.com/lib/uploadImg/20150325/20150325141406_581.jpg" alt="image"></p>
-<hr>
-<blockquote>
-<p>Docker的安装与配置</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为国内有“墙”，从github上下载Docker特别慢，所以推荐一个国内的下载地址：<a href="http://note.youdao.com/" target="_blank" rel="external">http://get.daocloud.io/</a>，由DaoCloud技术提供。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;windows os直接下Docker Toolbox，里面打包了Docker、Kitematic（一个docker gui工具，挺好用的，不过 一般大家还是习惯用命令行）、VirtualBox（Docker支持在原生linux上运行，win与mac os还不支持，所以需要搞一个linux虚拟机），安装过程傻瓜式下一步下一步。</p>
-<p><img src="../../../../images/docker/001.png" alt="image"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在windows下面，Docker的架构如下图：</p>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1512285887388&amp;di=de8b675ddef1cfbfa43f12e21250750d&amp;imgtype=0&amp;src=http%3A%2F%2Fstatic.open-open.com%2Flib%2FuploadImg%2F20160219%2F20160219233150_911.png" alt="image"></p>
-<ul>
-<li>Docker client：Docker的客户端，Docker本身是一种cs架构。</li>
-<li>Docker Host：Docker主机，也就是放docker镜像的地方。</li>
-<li>Docker daemon：Docker的守护进程，也就是服务端进程。</li>
-<li>Docker container：里面的一个个集装箱，也就是Docker的容器，后面会讲到。</li>
-</ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以看到在windows下，只有client端在windows操作系统中，其他均在linux vm环境里。</p>
-<blockquote>
-<p>注意事项</p>
-</blockquote>
-<ol>
-<li>支持windows 7以上</li>
-<li>需要有64位的操作系统</li>
-<li>你的CPU支持虚拟技术，并且在BIOS中已打开（win的任务管理器→性能里面可以看到CPU是否支持虚拟化技术），如下图：</li>
-</ol>
-<p><img src="../../../../images/docker/002.png" alt="image"></p>
-<hr>
-<blockquote>
-<p>Docker核心组件</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<h2 id="Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。"><a href="#Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。" class="headerlink" title="Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。"></a>Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。</h2><blockquote>
+<p>Maven基础</p>
 </blockquote>
 <ul>
-<li><strong>Docker Machine</strong></li>
+<li>Project：任何构建的事务，Maven均视为工程对象模型-POM</li>
+<li>POM：pom.xml，Maven核心文件，配置Maven相关所有依赖</li>
+<li>GroupId：工程标识</li>
+<li>Artifact：工程依赖文件，可以是jar、源文件、二进制、war等</li>
+<li>Dependency：依赖</li>
+<li>Plug-in：插件集合</li>
 </ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Docker machine实际上是帮助我们在Mac/Win下管理Docker host的工具，linux下不需要。具体架构如下图所示。</p>
-<p><img src="https://docker.github.io/machine/img/machine.png" alt="image"></p>
-<ol>
-<li>Docker Machine是当前在Mac/Win上运行Docker的唯一方式</li>
-<li>支持不同版本的Linux上管理多个Docker主机</li>
-<li>提供集中创建和管理Docker主机的功能</li>
-<li>与Docker Swarm集成创建Docker集群</li>
-</ol>
-<ul>
-<li><strong>Docker image、registry、container</strong></li>
-</ul>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1512297228156&amp;di=6af5a16dbbc5bee910727a5fa2c9f781&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.uml.org.cn%2Fyunjisuan%2Fimages%2F2016110921.png" alt="image"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;registry：集中管理image。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image：镜像。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container：镜像的实例，实际运行的组件。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个registry里可以有多个image，一个image可以有多个container实例。</p>
-<ul>
-<li><strong>Docker Machine基本使用</strong></li>
-</ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在步骤一通过Docker ToolBox安装完Docker后，双击启动Docker Quickstart Terminal，它会自动帮我们创建一个默认的Docker Machine，名字为“Default”，随后进入到如下界面：</p>
-<p><img src="../../../../images/docker/003.png" alt="image"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Docker Machine的常用命令如下：</p>
-<table>
-<thead>
-<tr>
-<th>命令名</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>version/help</td>
-<td>查看版本/查看帮助</td>
-</tr>
-<tr>
-<td>create/rm</td>
-<td>创建/删除一个Docker Machine</td>
-</tr>
-<tr>
-<td>start/stop/restart/kill</td>
-<td>起停Docker Machine（实际上就是起停VM）</td>
-</tr>
-<tr>
-<td>active/config/env/inspect/ip/ls/status/url</td>
-<td>获取一些信息</td>
-</tr>
-<tr>
-<td>ssh</td>
-<td>远程登录到Docker Machine</td>
-</tr>
-<tr>
-<td>scp</td>
-<td>本地与Docker Machine之间传输文件</td>
-</tr>
-</tbody>
-</table>
 <hr>
 <blockquote>
-<p>Docker实战</p>
+<p>Maven安装</p>
 </blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过Docker快速部属静态网站。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#查看machine环境配置</div><div class="line">docker-machine env</div></pre></td></tr></table></figure>
-<p><img src="../../../../images/docker/004.png" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#关联环境变量</div><div class="line">eval $(&quot;C:\Program Files\Docker Toolbox\docker-machine.exe&quot; env)</div></pre></td></tr></table></figure>
-<p><img src="../../../../images/docker/005.png" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#拉取镜像（我们使用国内的网易蜂巢提供的ngnix镜像，后面的:latest表示最新版本）</div><div class="line">docker pull hub.c.163.com/library/nginx:latest</div></pre></td></tr></table></figure>
-<p><img src="../../../../images/docker/006.png" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#查看当前所有镜像</div><div class="line">docker images</div></pre></td></tr></table></figure>
-<p><img src="../../../../images/docker/007.png" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#通过如下命令，创建一个名为nginx_demo的container并运行，本地8080端口映射到docker host的80端口，执行完后进入容器内</div><div class="line">docker run -p 8080:80 --name nginx_demo -it hub.c.163.com/library/nginx /bin/bash</div><div class="line"></div><div class="line">#执行此命令运行ngnix服务</div><div class="line">nginx</div></pre></td></tr></table></figure>
-<p><img src="../../../../images/docker/008.png" alt="image"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Ctrl+P，Ctrl+Q #退出容器，但不停止容器</div><div class="line"></div><div class="line">docker attach + 容器ID #进入容器内（ID不用输全，只要确保唯一性就行了）</div><div class="line"></div><div class="line">docker ps -a #查看当前所有容器</div><div class="line"></div><div class="line">docker top + 容器名 #列出一个容器内已经在跑的所有进程</div><div class="line"></div><div class="line">docker stop + 容器ID #停止一个容器</div><div class="line"></div><div class="line">docker rm + 容器ID #删除一个容器</div></pre></td></tr></table></figure>
-<p><img src="../../../../images/docker/009.png" alt="image"></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此时浏览器访问192.168.99.100:8080 （IP：docker machine的IP，可以通过docker-machine ls命令查看，端口号为machine映射的容器端口号8080:80，访问machine的8080端口实际上是访问的container的80端口）</p>
-<p><img src="../../../../images/docker/010.png" alt="image"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从<a href="http://note.youdao.com/" target="_blank" rel="external">http://maven.apache.org/download.cgi</a>下载最新发布。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apache-maven-3.5.2-bin文件夹结构：</p>
+<ul>
+<li>bin：Maven脚本</li>
+<li>boot：Maven自己的类加载器</li>
+<li>conf：配置文件setting.xml</li>
+<li>lib：Maven运行所依赖的类库jar包</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后将Maven的bin目录添加进环境变量，在cmd运行mvn -V：</p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514641479937&amp;di=7466d6eedac7016935c2030d0b1642a7&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D3705825986%2C3151346020%26fm%3D214%26gp%3D0.jpg" alt="image"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打印如上内容表明安装成功。Maven依赖java运行环境，请先装JDK。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运行完后会在C:\Users\pangc目录下生成一个.m2的文件，这是Maven本地仓库。</p>
 <hr>
 <blockquote>
-<p>附录</p>
+<p>构建Maven工程</p>
 </blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附上阿里云与网易蜂巢地址，里面有丰富的镜像，可以试着搭建一下。ps：由于伟大的“墙”的关系，Docker hub无法访问，所以还是访问国内的镜像吧。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阿里：<a href="http://note.youdao.com/" target="_blank" rel="external">https://dev.aliyun.com/search.html</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网易：<a href="http://note.youdao.com/" target="_blank" rel="external">https://hub.c.163.com/</a></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;也可以用Kitematic直接下载镜像：</p>
-<p><img src="../../../../images/docker/011.png" alt="image"></p>
-<blockquote>
-<p>最后</p>
-</blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不得不说这个小鲸鱼太他妹的萌了。</p>
-<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1512299622945&amp;di=71d173ab5b8415d17110469801491e80&amp;imgtype=0&amp;src=http%3A%2F%2Fimages2015.cnblogs.com%2Fblog%2F364241%2F201604%2F364241-20160425033415439-436819149.png" alt="image"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用IDEA新建一个Maven project，配置pom.xml添加所需依赖，随后选择【clean】和【install】按钮并执行，会发现本地仓库中已经有了所构建的依赖。OK，现在就可以开始使用所install的依赖来开发项目了。</p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514641682617&amp;di=2c4ad2f05ca229a84a4b94d94cd050cd&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1836175504%2C1171084863%26fm%3D214%26gp%3D0.jpg" alt="image"></p>
 <hr>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2017/12/17/ICMP详解/" title= ICMP详解 >
-                    <span>Next Post</span>
-                    <span>ICMP详解</span>
-                </a>
-            </li>
-        
         
             <li class="previous">
-                <a href= "/2017/12/02/《思考，快与慢》/" title= 《思考，快与慢》 >
+                <a href= "/2017/12/17/ICMP详解/" title= ICMP详解 >
                     <span>Previous Post</span>
-                    <span>《思考，快与慢》</span>
+                    <span>ICMP详解</span>
                 </a>
             </li>
         
@@ -317,7 +220,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        // id: "Docker&Docker-machine 入门实践", // 可选。默认为 location.href
+        // id: "Maven菜狗指南", // 可选。默认为 location.href
         owner: 'PrickerHub',
         repo: 'PrickerHub.github.io',
         oauth: {
