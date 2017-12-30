@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.pangchen.net/"/>
-  <updated>2017-12-30T11:03:12.717Z</updated>
+  <updated>2017-12-30T11:15:52.221Z</updated>
   <id>http://www.pangchen.net/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.pangchen.net/2017/12/30/Maven%E8%8F%9C%E7%8B%97%E6%8C%87%E5%8D%97/"/>
     <id>http://www.pangchen.net/2017/12/30/Maven菜狗指南/</id>
     <published>2017-12-29T19:38:56.000Z</published>
-    <updated>2017-12-30T11:03:12.717Z</updated>
+    <updated>2017-12-30T11:15:52.221Z</updated>
     
-    <content type="html"><![CDATA[<hr><blockquote><p>Maven简介</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><h2 id="Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。"><a href="#Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。" class="headerlink" title="Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。"></a>Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。</h2><blockquote><p>Maven基础</p></blockquote><ul><li>Project：任何构建的事务，Maven均视为工程对象模型-POM</li><li>POM：pom.xml，Maven核心文件，配置Maven相关所有依赖</li><li>GroupId：工程标识</li><li>Artifact：工程依赖文件，可以是jar、源文件、二进制、war等</li><li>Dependency：依赖</li><li>Plug-in：插件集合</li></ul><hr><blockquote><p>Maven安装</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从<a href="http://note.youdao.com/" target="_blank" rel="external">http://maven.apache.org/download.cgi</a>下载最新发布。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apache-maven-3.5.2-bin文件夹结构：</p><ul><li>bin：Maven脚本</li><li>boot：Maven自己的类加载器</li><li>conf：配置文件setting.xml</li><li>lib：Maven运行所依赖的类库jar包</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后将Maven的bin目录添加进环境变量，在cmd运行mvn -V：</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514641479937&amp;di=7466d6eedac7016935c2030d0b1642a7&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D3705825986%2C3151346020%26fm%3D214%26gp%3D0.jpg" alt="image"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打印如上内容表明安装成功。Maven依赖java运行环境，请先装JDK。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运行完后会在C:\Users\pangc目录下生成一个.m2的文件，这是Maven本地仓库。</p><hr><blockquote><p>构建Maven工程</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用IDEA新建一个Maven project，配置pom.xml添加所需依赖，随后选择【clean】和【install】按钮并执行，会发现本地仓库中已经有了所构建的依赖。OK，现在就可以开始使用所install的依赖来开发项目了。</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514641682617&amp;di=2c4ad2f05ca229a84a4b94d94cd050cd&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1836175504%2C1171084863%26fm%3D214%26gp%3D0.jpg" alt="image"></p><hr>]]></content>
+    <content type="html"><![CDATA[<hr><blockquote><p>Maven简介</p></blockquote><h2 id="nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。"><a href="#nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体系。</h2><blockquote><p>Maven基础</p></blockquote><ul><li>Project：任何构建的事务，Maven均视为工程对象模型-POM</li><li>POM：pom.xml，Maven核心文件，配置Maven相关所有依赖</li><li>GroupId：工程标识</li><li>Artifact：工程依赖文件，可以是jar、源文件、二进制、war等</li><li>Dependency：依赖</li><li>Plug-in：插件集合</li></ul><hr><blockquote><p>Maven安装</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从<a href="http://maven.apache.org/download.cgi/" target="_blank" rel="external">Maven官网</a>下载最新发布。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apache-maven-3.5.2-bin文件夹结构：</p><ul><li>bin：Maven脚本</li><li>boot：Maven自己的类加载器</li><li>conf：配置文件setting.xml</li><li>lib：Maven运行所依赖的类库jar包</li></ul><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;然后将Maven的bin目录添加进环境变量，在cmd运行mvn -V：</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514641479937&amp;di=7466d6eedac7016935c2030d0b1642a7&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D3705825986%2C3151346020%26fm%3D214%26gp%3D0.jpg" alt="image"></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打印如上内容表明安装成功。Maven依赖java运行环境，请先装JDK。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;运行完后会在C:\Users\pangc目录下生成一个.m2的文件，这是Maven本地仓库。</p><hr><blockquote><p>构建Maven工程</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用IDEA新建一个Maven project，配置pom.xml添加所需依赖，随后选择【clean】和【install】按钮并执行，会发现本地仓库中已经有了所构建的依赖。OK，现在就可以开始使用所install的依赖来开发项目了。</p><p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514641682617&amp;di=2c4ad2f05ca229a84a4b94d94cd050cd&amp;imgtype=jpg&amp;src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1836175504%2C1171084863%26fm%3D214%26gp%3D0.jpg" alt="image"></p><hr>]]></content>
     
     <summary type="html">
     
@@ -33,8 +33,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Maven简介&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/p&gt;
-&lt;h2 id=&quot;Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助
+&lt;h2 id=&quot;nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-nbsp-Maven是Apache的一个顶级项目，也是一款强大的构建工具，能帮助用户建立一套有效的自动化构建体
       
     
     </summary>
