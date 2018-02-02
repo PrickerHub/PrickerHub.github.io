@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        javascript标准对象与包装对象 · 庞晨个人网站
+        《反脆弱》 · 庞晨个人网站
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -102,7 +102,7 @@
                 <a href="/" >PangChen&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">javascript标准对象与包装对象</a>
+                <a href="#" class="post-name">《反脆弱》</a>
             </div>
     </div>
     
@@ -123,7 +123,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            javascript标准对象与包装对象
+            《反脆弱》
             <!-- 404 -->
             
         </h1>
@@ -141,13 +141,13 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = web>web</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = 读书笔记>读书笔记</a>
     
 </div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2015/07/22</span>
+                <span class="post-intro-time">2017/12/02</span>
             </div>
         
     </div>
@@ -155,55 +155,109 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>标准对象</p>
-<p>在JavaScript的世界里，一切都是对象。</p>
-<p>但是某些对象还是和其他对象不太一样。为了区分对象的类型，我们用typeof操作符获取对象的类型，它总是返回一个字符串：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="number">123</span>; <span class="comment">// 'number' </span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span>; <span class="comment">// 'number' </span></div><div class="line"><span class="keyword">typeof</span> <span class="string">'str'</span>; <span class="comment">// 'string' </span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">// 'boolean' </span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">// 'undefined' </span></div><div class="line"><span class="keyword">typeof</span> <span class="built_in">Math</span>.abs; <span class="comment">// 'function' </span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">// 'object' </span></div><div class="line"><span class="keyword">typeof</span> []; <span class="comment">// 'object' </span></div><div class="line"><span class="keyword">typeof</span> &#123;&#125;; <span class="comment">// 'object'</span></div></pre></td></tr></table></figure>
-<p>可见，number、string、boolean、function和undefined有别于其他类型。特别注意null的类型是object，Array的类型也是object，如果我们用typeof将无法区分出null、Array和通常意义上的object——{}。</p>
-<p>包装对象</p>
-<p>除了这些类型外，JavaScript还提供了包装对象，熟悉Java的小伙伴肯定很清楚int和Integer这种暧昧关系。</p>
-<p>number、boolean和string都有包装对象。没错，在JavaScript中，字符串也区分string类型和它的包装类型。包装对象用new创建：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>); <span class="comment">// 123,生成了新的包装类型 </span></div><div class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>); <span class="comment">// true,生成了新的包装类型 </span></div><div class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'str'</span>); <span class="comment">// 'str',生成了新的包装类型</span></div></pre></td></tr></table></figure>
-<p>虽然包装对象看上去和原来的值一模一样，显示出来也是一模一样，但他们的类型已经变为object了！所以，包装对象和原始值用===比较会返回false：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>); <span class="comment">// 'object' </span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>) === <span class="number">123</span>; <span class="comment">// false </span></div><div class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>); <span class="comment">// 'object' </span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>) === <span class="literal">true</span>; <span class="comment">// false </span></div><div class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'str'</span>); <span class="comment">// 'object' </span></div><div class="line"><span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'str'</span>) === <span class="string">'str'</span>; <span class="comment">// false</span></div></pre></td></tr></table></figure>
-<p>所以闲的蛋疼也不要使用包装对象！尤其是针对string类型！！！</p>
-<p>如果我们在使用Number、Boolean和String时，没有写new会发生什么情况？</p>
-<p>此时，Number()、Boolean和String()被当做普通函数，把任何类型的数据转换为number、boolean和string类型（注意不是其包装类型）：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n = <span class="built_in">Number</span>(<span class="string">'123'</span>); <span class="comment">// 123，相当于parseInt()或parseFloat() </span></div><div class="line"><span class="keyword">typeof</span> n; <span class="comment">// 'number' </span></div><div class="line"><span class="keyword">var</span> b = <span class="built_in">Boolean</span>(<span class="string">'true'</span>); <span class="comment">// true </span></div><div class="line"><span class="keyword">typeof</span> b; <span class="comment">// 'boolean' </span></div><div class="line"><span class="keyword">var</span> b2 = <span class="built_in">Boolean</span>(<span class="string">'false'</span>); <span class="comment">// true! 'false'字符串转换结果为true！因为它是非空字符串！ </span></div><div class="line"><span class="keyword">var</span> b3 = <span class="built_in">Boolean</span>(<span class="string">''</span>); <span class="comment">// false </span></div><div class="line"><span class="keyword">var</span> s = <span class="built_in">String</span>(<span class="number">123.45</span>); <span class="comment">// '123.45' </span></div><div class="line"><span class="keyword">typeof</span> s; <span class="comment">// 'string'</span></div></pre></td></tr></table></figure>
-<p>是不是感觉头大了？这就是JavaScript特有的催眠魅力！</p>
-<p>总结一下，有这么几条规则需要遵守：</p>
-<p>不要使用new Number()、new Boolean()、new String()创建包装对象；</p>
-<p>用parseInt()或parseFloat()来转换任意类型到number；</p>
-<p>用String()来转换任意类型到string，或者直接调用某个对象的toString()方法；</p>
-<p>通常不必把任意类型转换为boolean再判断，因为可以直接写if (myVar) {…}；</p>
-<p>typeof操作符可以判断出number、boolean、string、function和undefined；</p>
-<p>判断Array要使用Array.isArray(arr)；</p>
-<p>判断null请使用myVar === null；</p>
-<p>判断某个全局变量是否存在用typeof window.myVar === ‘undefined’；</p>
-<p>函数内部判断某个变量是否存在用typeof myVar === ‘undefined’。</p>
-<p>最后有细心的同学指出，任何对象都有toString()方法吗？null和undefined就没有！确实如此，这两个特殊值要除外，虽然null还伪装成了object类型。</p>
-<p>更细心的同学指出，number对象调用toString()报SyntaxError：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="number">123.</span>toString(); <span class="comment">// SyntaxError</span></div></pre></td></tr></table></figure>
-<p>遇到这种情况，要特殊处理一下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="number">123.</span>.toString(); <span class="comment">// '123', 注意是两个点！</span></div><div class="line">(<span class="number">123</span>).toString(); <span class="comment">// '123'</span></div></pre></td></tr></table></figure>
-<p>不要问为什么，这就是JavaScript代码的乐趣！</p>
+        <hr>
+<blockquote>
+<p><strong>书名</strong>：反脆弱</p>
+<p><strong>作者</strong>：[美]纳西姆•尼古拉斯•塔勒布</p>
+<p><strong>读后感</strong>：稳定与习惯带来“脆弱”以至于变得不堪一击。</p>
+</blockquote>
+<p><img src="http://i0.sinaimg.cn/cj/2014/0413/U2450P31DT20140413145334.jpg" alt="image"></p>
+<hr>
+<blockquote>
+<p>何为“脆弱”</p>
+</blockquote>
+<ul>
+<li><strong>脆弱的世界</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;世界面对“不确定性”，如此脆弱，面对突如其来的“枪击事件”、“恐怖袭击”，给世界带来严重的打击，而人类对此却无法预测。不可预测性使世界的脆弱性越来越强。</p>
+<ul>
+<li><strong>现代化并不是“脆弱”的解药</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现代化使世界变得更加紧密，牵一发而动全身，增强了世界的“脆弱性”。暴雨使电力系统瘫痪、大雪使城市交通瘫痪，对人们的影响远大于古代。</p>
+<ul>
+<li><strong>脆弱推手</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自认为可以预测未来的人。以看似科学的言论预测未来并将人们引入对未来“确定性”的幻想中的人，这些人称为“脆弱推手”。</p>
+<hr>
+<blockquote>
+<p>何为“反脆弱”</p>
+</blockquote>
+<ul>
+<li><strong>脆弱的反面</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;并不是坚强，坚强只能保证在不确定性中不受伤或保持不变。反脆弱是指在风险中保全自我，而且变得更好、更有力量。</p>
+<ul>
+<li><strong>反脆弱的目的</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接受不确定性，并从不确定性中获益。</p>
+<ul>
+<li><strong>反脆弱的层级</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;反脆弱拥有层级关系，个体的牺牲往往会带来系统的反脆弱能力的增强。大自然的进化过程就是个体的消亡带来整个体系的不断进化，不同层级的进退都对系统产生着或深或浅的影响，左右着全局。</p>
+<hr>
+<blockquote>
+<p>为什么要学会反脆弱</p>
+</blockquote>
+<ul>
+<li><strong>世界的脆弱性正在越来越强</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;现代化使世界变得越来越脆弱，更难以承受不确定性的冲击，系统的负责度变得前所未有，人类面临巨大挑战。</p>
+<ul>
+<li><strong>反脆弱性使生命体的特征</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无生命的机械体脆弱性很强，比如计算机，小小的机械故障可能导致整个系统瘫痪无法工作。机械体无自我修复能力，无法自我革新、自我进步。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生命体拥有很强的反脆弱性，创伤自愈后往往变更更加强大。生命体可以根据环境的变化及时调整自身，避免伤害，同时在这个过程里锻炼和强化自己。</p>
+<ul>
+<li><strong>反脆弱性的有无决定了生活方式</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两种生活方式：一种是“观光化”生活，预设未来可预期，按部就班一步一步完成既定步骤，期望得到理想的结果。另一种生活是随机漫步型的，欢迎生活中的随机事件，善于挖掘随机事件背后的价值、抓住机遇。</p>
+<ul>
+<li><strong>布里丹之驴</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;面对确定性左右为难，立于原地而亡。</p>
+<hr>
+<blockquote>
+<p>提升反脆弱能力的方法</p>
+</blockquote>
+<ul>
+<li><strong>过度补偿</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先使个体受挫或经历磨难，然后便可以接受更大的磨难。注射疫苗，先感染病毒从而产生抗体；肌肉撕裂，过度锻炼达到肌肉撕裂的效果，新长出来的肌肉会变得更加坚硬等，均是这个道理。</p>
+<ul>
+<li><strong>合理干预</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;给予系统合理的干预，避免过多枷锁阻碍系统的自我革新。过度干预的严重后果就是“医源性损伤”。生活工作中我们为了获得存在感，往往对简单的事务过度干预，提出强力而无用的建议或实施手段，阻碍系统达到应有的结果。典型例子就是“问题讨论”，好像不发表意见便会毫无价值。</p>
+<ul>
+<li><strong>杠铃策略</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多手准备，合理分配自己的时间、精力、资源。使杠铃的两侧相对平衡，避免满盘皆输。全局思考能力，不盲目自信，也不盲从。</p>
+<ul>
+<li><strong>不对称性</strong></li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;世界是非线性的。类似之前看过的《指数型企业》，很多看似线性的事务，都会因为不确定性变得陡峭。试错、调整，是获得最大收益的关键。</p>
+<hr>
+<blockquote>
+<p><strong>最后</strong></p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你不觉得饥饿，山珍海味也会是味同嚼蜡，如果没有辛勤付出，得到的结果将毫无意义。同样的，没有经历过伤痛便不懂得欢乐，没有经历过磨难，信念就不会坚固，被剥夺了个人风险，合乎道理的生活自然也就没有了意义。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生活中永远都充满着给你带来进步机会的挑战，无论是好还是不好的，要努力从中获益。</p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
             <li class="next">
-                <a href= "/2015/07/27/JVM重要知识点整理和学习/" title= JVM重要知识点整理和学习 >
+                <a href= "/2017/12/03/Docker&Docker-machine 入门实践/" title= Docker&Docker-machine 入门实践 >
                     <span>Next Post</span>
-                    <span>JVM重要知识点整理和学习</span>
+                    <span>Docker&Docker-machine 入门实践</span>
                 </a>
             </li>
         
         
             <li class="previous">
-                <a href= "/2015/07/21/Node.js教程/" title= Node.js教程 >
+                <a href= "/2017/12/02/《思考，快与慢》/" title= 《思考，快与慢》 >
                     <span>Previous Post</span>
-                    <span>Node.js教程</span>
+                    <span>《思考，快与慢》</span>
                 </a>
             </li>
         
@@ -220,7 +274,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
-        // id: "javascript标准对象与包装对象", // 可选。默认为 location.href
+        // id: "《反脆弱》", // 可选。默认为 location.href
         owner: 'PrickerHub',
         repo: 'PrickerHub.github.io',
         oauth: {
