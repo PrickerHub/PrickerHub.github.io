@@ -124,6 +124,115 @@
     
     
         <article class="index-post">
+            <a class="content-show-full" href = "/2017/11/13/多线程socket实践/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>多线程socket实践</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+内容比较简单，直接看源码+注释
+
+
+
+Server端
+
+
+服务端每接受一个client的连接请求，就启一个独立的线程去处理请求
+
+123456789101112131415161718192021222324252627282930313233# -*- coding:utf-8 -*-import socketimport threadingfrom time import sleepHOST = '0.0.0.0'PORT = 12345SERVERADDR = (HOST, PORT)def response(clientSocket, clientAddr):    print...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/11/13</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/11/12/python常见错误汇总（持续更新）/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>python常见错误汇总（持续更新）</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+
+问题描述：
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天用itchat接口，执行登录的代码如下：
+1itchat.auto_login()
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结果一运行报了：
+1WindowsError: [Error 1155] : &apos;QR.png&apos;
+
+错误原因
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查了下1155错误是“没有应用程序与此操作的指定文件有关联。 ”跳到函数的底层调用（感谢python可以直...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/11/12</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
+            <a class="content-show-full" href = "/2017/11/12/Windows Error Code详解/" >
+                    <h2 class="abstract-title">
+                        
+                        <span>Windows Error Code详解</span>
+                    </h2>
+                <div class="abstract-content">
+                    
+
+Windows Error Code详解
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127...
+                </div>
+            </a>
+            <div class="abstract-post-meta">
+                <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
+    
+</div>
+                
+                <!-- date  -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/11/12</span>
+                </div>
+            </div>
+        </article>
+    
+    
+    
+        <article class="index-post">
             <a class="content-show-full" href = "/2017/11/12/python wechat API (itchat)/" >
                     <h2 class="abstract-title">
                         
@@ -192,77 +301,6 @@ itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是
                 <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-href = 读书笔记>读书笔记</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/11/12</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/11/12/Windows Error Code详解/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>Windows Error Code详解</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-
-Windows Error Code详解
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/11/12</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/11/12/python常见错误汇总（持续更新）/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>python常见错误汇总（持续更新）</span>
-                    </h2>
-                <div class="abstract-content">
-                    
-
-问题描述：
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天用itchat接口，执行登录的代码如下：
-1itchat.auto_login()
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结果一运行报了：
-1WindowsError: [Error 1155] : &apos;QR.png&apos;
-
-错误原因
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查了下1155错误是“没有应用程序与此操作的指定文件有关联。 ”跳到函数的底层调用（感谢python可以直...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = Python>Python</a>
     
 </div>
                 
@@ -443,35 +481,6 @@ Windows Error Code详解
                 <!-- date  -->
                 <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/10/27</span>
-                </div>
-            </div>
-        </article>
-    
-    
-    
-        <article class="index-post">
-            <a class="content-show-full" href = "/2017/10/17/RearchOfMenAndWomen/" >
-                    <h2 class="abstract-title">
-                        
-                        <span>杂谈：聊聊男人与女人</span>
-                    </h2>
-                <div class="abstract-content">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在原始社会中，男人善于打猎耕种，女人善于纺织育儿，所谓“男主外，女主内”，生理差异导致社会分工不同，影响数千年，直到现在，呼吁男女平等，但是女人在社会上的地位任然微妙，偶尔出现比较强势的女人，社会便会习惯给其称呼前加上性别识别，比如“女CEO”、“女总理”，个人认为真正的“男女平等”其实来自于承认生理差异，并注重不同分工，比如你不得不承认在幼儿教育方面，女性天生要优于男性，而男人在使用工具方面要优于女性。
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;弗洛伊德说人类的...
-                </div>
-            </a>
-            <div class="abstract-post-meta">
-                <!-- tags  -->
-                
-                <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-href = 杂谈>杂谈</a>
-    
-</div>
-                
-                <!-- date  -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer"></span><span class="abstract-time">2017/10/17</span>
                 </div>
             </div>
         </article>
@@ -1314,7 +1323,94 @@ Windows Error Code详解
     
     
     
-    <div class="total-archive"> Total : 53 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 54 </div>
     
     <div class="post-archive">
     
@@ -1323,6 +1419,11 @@ Windows Error Code详解
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/04</span><a class="archive-post-title" href= "/2018/02/04/打赢——职场新人求胜指南/" >打赢——职场新人求胜指南</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1385,12 +1486,12 @@ Windows Error Code详解
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python常见错误汇总（持续更新）/" >python常见错误汇总（持续更新）</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python wechat API (itchat)/" >Wechat API (itchat)</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/Windows Error Code详解/" >Windows Error Code详解</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python常见错误汇总（持续更新）/" >python常见错误汇总（持续更新）</a>
         </li>
     
     
@@ -1400,7 +1501,7 @@ Windows Error Code详解
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/python wechat API (itchat)/" >Wechat API (itchat)</a>
+            <span class="archive-post-date">11/12</span><a class="archive-post-title" href= "/2017/11/12/Windows Error Code详解/" >Windows Error Code详解</a>
         </li>
     
     
@@ -1415,12 +1516,12 @@ Windows Error Code详解
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2017/10/31/在最佳时间 最佳角色 做出最佳贡献/" >在最佳时间 最佳角色 做出最佳贡献</a>
+            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2017/10/31/如何让我遇见你，在你最美的时候-2010/" >如何让我遇见你，在你最美的时候-2010</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2017/10/31/如何让我遇见你，在你最美的时候-2010/" >如何让我遇见你，在你最美的时候-2010</a>
+            <span class="archive-post-date">10/31</span><a class="archive-post-title" href= "/2017/10/31/在最佳时间 最佳角色 做出最佳贡献/" >在最佳时间 最佳角色 做出最佳贡献</a>
         </li>
     
     
@@ -1445,7 +1546,7 @@ Windows Error Code详解
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/Java多线程编程核心技术/" >《Java多线程编程核心技术》</a>
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/自卑与超越/" >《自卑与超越》</a>
         </li>
     
     
@@ -1460,17 +1561,17 @@ Windows Error Code详解
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/自卑与超越/" >《自卑与超越》</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2017/10/06/心胜/" >《心胜》</a>
+            <span class="archive-post-date">10/09</span><a class="archive-post-title" href= "/2017/10/09/Java多线程编程核心技术/" >《Java多线程编程核心技术》</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2017/10/06/赢/" >《赢》</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/06</span><a class="archive-post-title" href= "/2017/10/06/心胜/" >《心胜》</a>
         </li>
     
     
